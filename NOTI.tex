@@ -1,0 +1,666 @@
+\documentclass[11pt]{scrartcl}
+%\includeonly{chapters/fundamentals-of-inequalities}
+\usepackage[sexy]{evan}
+
+\title{NOTI A CHI?}
+\author{Anto Turneight}
+\date{\today}
+\begin{document}
+
+\maketitle
+ \begin{abstract}
+Questo è un mio tentativo di enucleare in un pdf alcune delle possibili
+soluzioni dei famosissimi NOTI del senior. Per chi non sapesse bene cosa siano,
+sono $10$ problemi olimpici, alcuni dei quali vengono proposti nel test finale
+dello stage senior, che penso abbiano lo scopo di far prendere familiarità
+con alcune tecniche standard utili per la risoluzione di diversi problemi di
+natura olimpica. Essendo problemi standard, secondo me non sono il massimo del
+divertimento, ma sono comunque utili anche per migliorare le proprie abilità
+di proof-writing, che credo sia il motivo per cui li mettano nel test finale.
+La cosa che mi ha sorpreso è che in rete non sono riuscito a trovare un
+pdf che raccoglie le soluzioni, e quindi volevo porre rimedio a sta cosa.
+Ci tengo però a precisare che su youtube si trovano i video di Giuseppe Bassi, dove
+viene spiegato bene il procedimento.
+Le soluzioni possono contenere errori e non essere le migliori di sempre,
+sono per lo più mie integrate con qualche idea delle sol di Giuseppe Bassi,
+quindi correzioni e suggerimenti sono bene accetti. Spero
+possano essere utili a qualcuno. Il template latex è quello solito di
+Evan Chen. I problemi sono raggruppati nelle loro quattro aree tematiche (Algebra
+,Combinatoria, Geometria, teoria dei Numeri).
+ \end{abstract}
+
+ \tableofcontents
+
+
+\newpage
+
+
+\section{Problemi}
+\begin{enumerate}[\bfseries 1.]
+\item %% Problem 1
+  (A1)
+Un polinomio $P(z)$ a coefficienti complessi ha grado 2002 e ha le
+radici (complesse) a due a due distinte.
+Dimostrare che esistono numeri complessi $a_1, \ldots, a_{2002}$
+tali che, se si definiscono i polinomi $P_n(z)$ mediante la ricorrenza
+\[
+  P_1(z)=z-a_1, \quad P_{n+1}(z)=\left[P_n(z)\right]^2-a_{n+1},
+\]
+allora $P(z)$ divide $P_{2002}(z)$.
+
+\item %% Problem 2
+  (A2)
+10. Siano $a, b, c$ numeri reali positivi. Dimostrare che
+$$
+\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b} \geq \frac{3}{2}
+$$
+in almeno tre modi diversi, usando
+- la sostituzione $a+b=x, b+c=y, c+a=z$;
+- Cauchy Schwarz;
+- le disuguaglianze di convessità.
+
+Determinare quindi le migliori costanti $C_1, C_2$ tali che
+
+\[
+  C_1 \leq \frac{a}{a+b}+\frac{b}{b+c}+\frac{c}{c+a} \leq C_2 .
+\]
+
+\item %% Problem 3
+  (A3)
+Trovare tutte le funzioni $f: \mathbb{R} \rightarrow \mathbb{R}$ tali che
+$$
+f(x f(x)+f(y))=[f(x)]^2+y
+$$
+per ogni $x, y$ reali.
+
+\item %% Problem 4
+  (C1) Ad un party prendono parte $12 k$ persone.
+Ciascuna di esse stringe la mano ad esattamente $3 k+6$ persone.
+Si sa che esiste un numero $N$ tale che, per ogni coppia di persone
+$A, B$, il numero di invitati che stringe la mano sia ad $A$ sia a $B$
+è esattamente $N$.
+Determinare per quali valori (interi) di $k$ si può realizzare
+questa situazione.
+
+\item %% Problem 5
+  (C2)Alberto e Barbara tracciano un grafo su di un foglio ed iniziano
+a giocare al seguente gioco. A turno, iniziando da Alberto,
+ciascun giocatore effettua una delle seguenti due mosse:
+- cancellare tre segmenti che formano un triangolo;
+- dati tre punti di cui due non collegati, ma collegati al terzo,
+cancellare i due collegamenti presenti e unire i due punti non collegati.
+
+Il giocatore che non può fare mosse valide perde la partita.
+Dimostrare che l'esito della partita non dipende da come giocano
+Alberto e Barbara, e determinare un criterio per stabilire chi vince
+in funzione della configurazione iniziale.
+\item %% Problem 6
+  (G1)Sia dato un triangolo $A B C$ e si fissino i punti $A^{\prime}, B^{\prime}, C^{\prime}$
+sui lati opposti ai vertici $A, B$, $C$, rispettivamente,
+in modo che le rette $A A^{\prime}, B B^{\prime}, C C^{\prime}$
+siano concorrenti in un punto $P$ interno al triangolo.
+Sia $d$ il diametro del cerchio circoscritto al triangolo $A B C$,
+e sia $S^{\prime}$ l'area del triangolo $A^{\prime} B^{\prime} C^{\prime}$.
+Dimostrare che
+$$
+d \cdot S^{\prime}=A B^{\prime} \cdot B C^{\prime} \cdot C A^{\prime} .
+$$.
+
+\item %% Problem 7
+  (G2)Siano $A B M N$ e $B C Q P$ i quadrati costruiti sui lati
+$A B$ e $B C$ di un triangolo, esternamente al triangolo stesso.
+Dimostrare che i centri di tali quadrati ed i punti medi di $A C$ ed
+$M P$ sono i vertici di un quadrato.
+
+\item %% Problem 8
+  (G3) Sia $M N$ una retta parallela al lato $B C$ di un triangolo $A B C$ che
+interseca i lati $A B$ e $A C$ in $M$ ed $N$ rispettivamente.
+Sia $P$ l'intersezione delle rette $B N$ e $C M$, e si supponga
+che le circonferenze circoscritte ai triangoli $B M P$ e $C N P$
+abbiano un ulteriore punto d'intersezione $Q$, oltre a $P$.
+Mostrare che $\angle BAQ=\angle CAP$.
+\item %% Problem 9
+  (N1) Per ogni intero positivo $n$, sia $d_n$ il massimo comun divisore tra
+\[
+100 + n^2 \qquad \text{e} \qquad 100 + (n+1)^2 .
+\]
+
+Determinare il massimo valore possibile per $d_n$.
+
+\item %% Problem 10
+  (N2) Consideriamo l’insieme
+
+\[
+D = \{\, n \in \mathbb{N} : n \mid (2^n + 1) \,\}.
+\]
+\begin{enumerate}[(a)]
+    \item Determinare tutti i primi che appartengono a \(D\).
+    \item Determinare tutte le potenze di primi che appartengono a \(D\).
+    \item Determinare tutti gli elementi di \(D\) che sono prodotto di due primi.
+    \item Dimostrare che tutti gli elementi di \(D\) sono multipli di \(3\).
+    \item Determinare tutti gli elementi di \(D\) della forma \(p^2 q\), con \(p\) e \(q\) primi distinti.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\pagebreak
+
+
+
+
+\section{SOLUZIONI AI PROBLEMI}
+\section{A}
+
+\subsection{A1}
+\begin{lemma*}
+Dati $n\geq 1$ e $n+1$ valori complessi arbitrari $x_1,\dots,x_{n+1}$, esistono $a_1,\dots,a_n\in\mathbb{C}$ tali che $P_n(x_1)^2=\dots=P_n(x_{n+1})^2$.
+\end{lemma*}
+
+\begin{proof}
+Per $n=1$: si prende $a_1=\frac{x_1+x_2}{2}$. Allora $P_1(x_1)=-P_1(x_2)$, dunque i quadrati coincidono.
+
+Sia $n\geq 2$ e si assuma il lemma vero per $n-1$. Per ipotesi induttiva esistono $a_1,\dots,a_{n-1}$ tali che
+$$
+P_{n-1}(x_1)^2=\dots=P_{n-1}(x_n)^2=:c.
+$$
+Sia $A:=P_{n-1}(x_{n+1})$. Si sceglie
+$$
+a_n=\frac{A^2+c}{2}.
+$$
+Allora
+$$
+P_n(x_i)=P_{n-1}(x_i)^2-a_n=c-a_n=-\bigl(A^2-a_n\bigr)=-P_n(x_{n+1})
+$$
+per $i=1,\dots,n$, quindi $P_n(x_1)^2=\dots=P_n(x_{n+1})^2$.
+\end{proof}
+
+Siano $\alpha_1,\dots,\alpha_{2002}$ le radici di $P$, distinte. Basta costruire $a_1,\dots,a_{2002}$ tali che $P_{2002}(\alpha_i)=0$ per ogni $i$.
+
+Applicando il lemma con $n=2001$ e $\{x_i\}=\{\alpha_i\}$ si ottengono $a_1,\dots,a_{2001}$ tali che
+$$
+P_{2001}(\alpha_1)^2=\dots=P_{2001}(\alpha_{2002})^2=:c.
+$$
+Si pone infine $a_{2002}=c$. Allora $P_{2002}(\alpha_i)=0$ per ogni $i$, dunque $P$ divide $P_{2002}$.
+
+
+
+\subsection{A2}
+\textbf{Modo 1 (sostituzione).} Posto $x=b+c,\;y=c+a,\;z=a+b$, si ha
+$$
+\sum_{\text{cyc}}\frac{a}{b+c}=\frac12\sum_{\text{cyc}}\frac{y+z-x}{x}
+=\frac12\Bigl(\sum_{\text{sym}}\frac{x}{y}-3\Bigr)\ge\frac12(6-3)=\frac32,
+$$
+poich\'e $\frac{x}{y}+\frac{y}{x}\ge2$ per ogni coppia.
+
+\textbf{Modo 2 (Cauchy--Schwarz).} Per Titu,
+$$
+\sum_{\text{cyc}}\frac{a}{b+c}=\sum_{\text{cyc}}\frac{a^2}{a(b+c)}
+\ge\frac{(a+b+c)^2}{2(ab+bc+ca)}\ge\frac{3(ab+bc+ca)}{2(ab+bc+ca)}=\frac32,
+
+$$
+dove $(a+b+c)^2\ge3(ab+bc+ca)\iff a^2+b^2+c^2\ge ab+bc+ca$.
+
+\textbf{Modo 3 (convessit\`a).} Per omogeneit\`a, poniamo $a+b+c=1$; allora $b+c=1-a$ etc.
+$$
+\sum_{\text{cyc}}\frac{a}{1-a}\ge\frac32.
+$$
+$f(x)=\frac{x}{1-x}$ su $(0,1)$ ha $f''(x)=\frac{2}{(1-x)^3}>0$; per Jensen,
+$$
+\frac{f(a)+f(b)+f(c)}{3}\ge f\!\left(\frac13\right)=\frac12.
+$$
+
+\textbf{Determinazione delle costanti.} Sia $S=\frac{a}{a+b}+\frac{b}{b+c}+\frac{c}{c+a}$.
+Per il limite inferiore, $\frac{a}{a+b}>\frac{a}{a+b+c}$ e cicliche, quindi $S>1$.
+Con $a=1,\;b=t,\;c=t^2$ e $t\to\infty$ si ha $S\to1$, dunque $C_1=1$.
+Per il limite superiore, $\frac{a}{a+b}<\frac{a+c}{a+b+c}$ etc., quindi $S<2$.
+Con $a=\varepsilon,\;b=\varepsilon^2,\;c=1$ e $\varepsilon\to0^+$ si ha $S\to2$, dunque $C_2=2$.
+
+
+
+\subsection{A3}
+
+Denotiamo con $P(x,y)$ l'asserzione
+\[
+f\bigl(x\,f(x)+f(y)\bigr)=[f(x)]^2+y.
+\]
+Da $P(0,y)$ segue $f(f(y))=[f(0)]^2+y$. Dunque $f$ è biiettiva e esiste $a$ con $f(a)=0$.
+Da $P(a,0)$ si ottiene $f(f(0))=0$. Ma $f(f(0))=[f(0)]^2$, quindi $f(0)=0$ e $f(f(y))=y$ per ogni $y$.
+Sostituendo $x$ con $f(x)$ in $P(x,y)$ e usando $f(f(x))=x$ si ha
+\[
+f\bigl(x\,f(x)+f(y)\bigr)=x^2+y.
+\]
+Confrontando con $P(x,y)$ si deduce $[f(x)]^2=x^2$, cioè $f(x)=\pm x$ per ogni $x$.
+Le funzioni $f(x)=x$ e $f(x)=-x$ funzionano. Se esistessero $a,b\neq0$ con $f(a)=a$
+e $f(b)=-b$, allora $P(a,b)$ darebbe $f(a^2-b)=a^2+b$, impossibile
+poiché il primo membro vale $\pm(a^2-b)$ ed $a$ e $b$ sono non nulli.
+
+Quindi le sole soluzioni sono $f(x)=x$ e $f(x)=-x$.
+
+
+\section{C}
+
+\subsection{C1}
+Il grafo $G$ delle strette di mano $v=12k$ vertici ed è regolare di grado $d=3k+6$.
+Inoltre esiste un intero $N$ tale che ogni coppia di vertici distinti
+ha esattamente $N$ vicini comuni.
+Contiamo in due modi le terne ordinate $(A,B,C)$ di vertici distinti con $A\sim B$ e $A\sim C$.
+Fissato $A$, si possono scegliere $B$ e $C$ in $\binom{d}{2}$ modi,
+quindi il totale è $v\binom{d}{2}$.
+
+D’altra parte, fissata una coppia $\{B,C\}$, il numero di $A$ comuni è $N$,
+e le coppie sono $\binom{v}{2}$. Si ottiene perciò
+\[
+12k\cdot\binom{3k+6}{2}=N\cdot\binom{12k}{2},
+\]
+da cui
+\[
+N=\frac{(3k+6)(3k+5)}{12k-1}.
+\]
+Dunque $12k-1$ divide $(3k+6)(3k+5)$. Poiché $\gcd(12k-1,3)=1$, segue che
+$12k-1$ divide $3k^2+11k+10$. Eseguendo la divisione euclidea di $3k^2+11k+10$
+per $12k-1$ si trova un resto costante, e si conclude che $12k-1$ divide $175$.
+I divisori positivi di $175$ sono $1,5,7,25,35,175$.
+L’unica soluzione intera $k\ge 1$ per cui $12k-1$ è uno di questi divisori e
+$N$ risulta intero positivo è $k=3$, che dà $N=6$. \\
+\textbf{Costruzione per $k=3$}.
+I $36$ vertici li immaginiamo come le celle di una schacchiera $6 \times 6$ .
+Due punti distinti sono adiacenti se e solo se coincidono in esattamente
+una delle tre coordinate
+\[
+(x,y)\mapsto x,\qquad (x,y)\mapsto y,\qquad (x,y)\mapsto x+y\bmod 6.
+\]
+Le tre partizioni indotte (righe, colonne, somme costanti modulo 6) sono a due a due ortogonali:
+cioè una classe di una partizione e una classe di un’altra si intersecano in un solo punto.
+Di conseguenza ogni vertice appartiene a esattamente una classe di ciascuna partizione,
+e le tre classi contribuiscono $5+5+5$ punti distinti; il grado è dunque $15$.\\
+Siano ora $A$ e $B$ due vertici distinti. Un terzo punto $C$ è vicino comune se e solo se coincide con
+$A$ in una coordinata e con $B$ in una coordinata.\\
+- Se $A$ e $B$ condividono già una coordinata, gli altri $4$ punti della retta comune e
+le due combinazioni “incrociate” delle restanti coordinate (ciascuna delle quali,
+per ortogonalità, determina un unico punto) danno esattamente $6$ vicini comuni. \\
+- Se $A$ e $B$ non condividono nessuna coordinata, le $3\times 2=6$ possibili scelte
+di coordinate determinano, sempre per ortogonalità, esattamente $6$ punti distinti.
+In entrambi i casi il numero di vicini comuni è $6$.
+\begin{remark*}
+La parte non standard del problema è la costruzione, ed è anche la parte
+più interessante secondo me. Infatti è un topos abbastanza ricorrente quello di
+dare un interpretazione circa matriciale al grafo, ad esempio TF senior 25 problema
+dimostrativo di C usa un'idea simile per la costruzione (anche se è un paragone un po' tirato per i capelli).
+Facendo un peletto in più di ricerca (chat
+gpt), si scopre che il grafo è uno strongly regular graph con parametri
+\[ \operatorname{srg}(36,15,6,6) \]
+(e quindi con $  \lambda=\mu  $).
+Più specificamente, all’interno di questa classe, si tratta del grafo di Cayley del
+gruppo abeliano  $  \mathbb{Z}_6\times\mathbb{Z}_6  $ rispetto all’insieme
+di connessione costituito dagli elementi non banali dei tre sottogruppi
+\[\langle(1,0)\rangle,\qquad\langle(0,1)\rangle,\qquad\langle(1,-1)\rangle.\]
+Equivalentemente, è il grafo ottenuto come unione delle cricche provenienti
+da tre classi parallele a due a due ortogonali (righe, colonne e somme costanti)
+su un insieme di $  6^2  $ punti.
+\end{remark*}
+
+\subsection{C2}
+Supponiamo il grafo abbia $n$ vertici di grado $d_1,d_2 \ldots , d_n$. Innanzitutto
+notiamo che il numero di archi del grafo decresce strettamente dopo ogni mossa e
+quindi il gioco deve finire. Consideriamo la quantità
+\[T = \sum_{i=1}^{n} \lfloor \frac{d_i}{2} \rfloor\].
+L'osservazione principale è che $T$ dopo ogni mossa decresce sempre o
+ di $3$ nel caso vengano tolti tre archi di un triangolo, in queanto il grado
+ di ogni vertice che lo forma decresce di $2$,oppure di $1$ quando, la seconda
+ mossa viene applicata, infatti due vertici del triangolo mantengono lo stesso
+ grado mentre l'altro decresce di $2$. Osservo inoltre che una mossa è possibile
+ se e solo se $T>0$. Infatti se esiste un vertice di grado due o superiore posso
+ applicare quantomeno la seconda mossa, se invece non esistesse nessun vertice di
+ grado almeno due, entrambe le mosse sono precluse. Di conseguenza il gioco termina
+ nel momento in cui $T=0$. Poichè $T$ decresce sempre di un numero dispari,
+ la parità del numero di mosse possibili è unicamente determinata, e di conseguenza,
+ è determinato anche l'esito del gioco, infatti se $T$ è disparti vince Alberto,
+ altrimenti Barbara.
+
+\section{G}
+
+\subsection{G1}
+Siano $a=BC$, $a_1=BA'$, $a_2=A'C$, $b=CA$, $b_1=CB'$, $b_2=B'A$, $c=AB$, $c_1=AC'$, $c_2=C'B$.
+
+Per il teorema di Ceva (le ceviane sono concorrenti) si ha
+\[
+\frac{a_1}{a_2}\cdot\frac{b_1}{b_2}\cdot\frac{c_1}{c_2}=1,
+\]
+da cui $a_1 b_1 c_1=a_2 b_2 c_2=x$.
+
+
+\begin{center}
+\begin{asy}
+import graph;
+size(5cm);
+defaultpen(linewidth(0.8));
+pen tri = rgb(0,0.8,0);
+pen thick = rgb(0,0.4,0.6);
+
+pair A  = (3.5761,24.9047);
+pair B  = (1,17);
+pair C  = (10,17);
+
+pair Ap = (4.4565,17);
+pair Bp = (6.0339,21.8804);
+pair Cp = (2.2920,20.9645);
+
+pair X  = (4.1196,20.0245);
+
+draw(A--B--C--cycle, tri+linewidth(0.5));
+draw(Ap--Bp--Cp--cycle, tri+linewidth(0.5));
+draw(Ap--A, thick+linewidth(0.6));
+draw(B--Bp, thick+linewidth(0.6));
+draw(C--Cp, thick+linewidth(0.6));
+draw(B--Ap);
+draw(C--Ap);
+draw(C--Bp);
+draw(A--Bp);
+draw(A--Cp);
+draw(B--Cp);
+
+dot(A);  dot(B);  dot(C);
+dot(Ap); dot(Bp); dot(Cp);
+dot(X);
+
+label("$A$",  A,  NE);
+label("$B$",  B,  SW);
+label("$C$",  C,  SE);
+
+label("$A'$", Ap, S);
+label("$B'$", Bp, NE);
+label("$C'$", Cp, NW);
+label("$X$",  X,  NE);
+
+label("$a_1$", midpoint(B--Ap), NE);
+label("$a_2$", midpoint(C--Ap), NE);
+
+label("$b_1$", midpoint(C--Bp), NE);
+label("$b_2$", midpoint(A--Bp), NE);
+
+label("$c_1$", midpoint(A--Cp), NE);
+label("$c_2$", midpoint(B--Cp), NE);
+
+\end{asy}
+
+\end{center}
+Denotiamo con $[XYZ]$ l’area del triangolo $XYZ$ e sia $S=[ABC]$. L’area $S'=[A'B'C']$
+si ottiene sottraendo da $S$ le aree dei tre triangoli $BA'C'$, $CB'A'$ e $AC'B'$:
+\[
+S'=S-[BA'C']-[CB'A']-[AC'B'].
+\]
+Osserviamo che
+\[
+[BA'C']=\frac{a_1}{a}\cdot[BCC']=\frac{a_1}{a}\cdot\frac{c_2}{c}\cdot S,
+\]
+e analogamente
+\[
+[CB'A']=\frac{b_1}{b}\cdot\frac{a_2}{a}\cdot S,\qquad
+[AC'B']=\frac{c_1}{c}\cdot\frac{b_2}{b}\cdot S.
+\]
+Sostituendo si ottiene
+\[
+S'=S\Biggl(1-\frac{a_1 c_2}{a c}-\frac{b_1 a_2}{b a}-\frac{c_1 b_2}{c b}\Biggr)
+=S\cdot\frac{abc-a b_2 c_1-b c_2 a_1-c a_2 b_1}{abc}.
+\]
+Ricordiamo la formula $S=\dfrac{abc}{2d}$ (equivalente a $S=\dfrac{abc}{4R}$ con $d=2R$).
+Moltiplicando per $d$ si ha
+\[
+d\cdot S'=\frac{abc-a b_2 c_1-b c_2 a_1-c a_2 b_1}{2}.\tag{$*$}
+\]
+Vogliamo mostrare che il membro destro di $(*)$ coincide con $a_2 b_2 c_2$.
+Sostituiamo $a=a_1+a_2$, $b=b_1+b_2$, $c=c_1+c_2$ e sviluppiamo il numeratore:
+\begin{align*}
+abc-a b_2 c_1-b c_2 a_1-c a_2 b_1
+&=(a_1+a_2)(b_1+b_2)(c_1+c_2)\\
+&\quad-(a_1+a_2)b_2 c_1-(b_1+b_2)c_2 a_1-(c_1+c_2)a_2 b_1.
+\end{align*}
+Espandendo e semplificando si ottiene esattamente $ d \cdot S'
+\frac{a_1 b_1 c_1+a_2 b_2 c_2}{2}=x$.
+Inoltre $x=a_2 b_2 c_2=AB'\cdot BC'\cdot CA'$, da cui la tesi segue.
+\subsection{G2}
+Sia $L$ il punto medio di $CA$, sia $K$ il punto medio di $MP$, e siano $O_1$ e $O_2$
+i centri dei quadrati $BCQP$ e $ABMN$ rispettivamente.
+Per definizione $O_1$ è il punto medio di $CP$ e $O_2$ è il punto medio di $AM$.
+
+Consideriamo la rotazione $\theta$ di centro $A$ e angolo $90^\circ$ in
+senso antiorario, quindi  $\theta(M)=A$ e $\theta(C)=P$.
+
+Allora $\theta$ manda il segmento $MC$ nel segmento $AP$, quindi $MC=AP$ e
+$PA\perp CM$.
+Adesso consideriamo il quadrilatero $ACPM$, i punti $L$, $O_1$, $K$, $O_2$
+sono i punti medi di $AC$, $CP$, $PM$ e $MA$ rispettivamente.
+Ne segue
+\[
+LO_1=KO_2=\frac12 AP=\frac12 CM=O_1K=O_2L.
+\]
+Dunque $LO_1KO_2$ è un rombo. Inoltre, poiché $MC\perp AP$, per Talete si ha
+\[
+LO_1\parallel KO_2\parallel AP\perp CM\parallel O_1K\parallel O_2L.
+\]
+I lati consecutivi sono perciò perpendicolari, e $LO_1KO_2$ è dunque un quadrato.
+
+\begin{center}
+\begin{asy}
+import graph;
+size(8cm);
+defaultpen(linewidth(0.8));
+pen thinGreen = rgb(0,0.8,0) + linewidth(0.6);
+pen medRed   = rgb(1,0,0.2) + linewidth(0.9);
+pen medCyan  = rgb(0.2,1,0.8) + linewidth(0.6);
+pen thickBlue = rgb(0,0,0.8) + linewidth(0.9);
+pen aquaThin = rgb(0,1,1) + linewidth(0.6);
+pen dotstyle = black;
+
+pair A = (4.,19.);
+pair B = (5.444732812200629,23.55713789950519);
+pair C = (11.,19.);
+pair M = (0.8875949126954406,25.00187071170582);
+pair N = (-0.5571378995051903,20.44473281220063);
+pair Q = (15.557137899505188,24.555267187799377);
+pair P = (10.001870711705816,29.112405087304563);
+pair L = (7.5,19.);
+pair K = (5.444732812200629,27.057137899505193);
+pair O1 = (10.500935355852908,24.056202543652283);
+pair O2 = (2.4437974563477205,22.00093535585291);
+
+draw(A--B--C--cycle, thinGreen);
+draw(A--B--M--N--cycle, thinGreen);
+draw(B--C--Q--P--cycle, thinGreen);
+draw(M--B--C--cycle, medCyan);
+draw(A--B--P--cycle, aquaThin);
+
+draw(A--C, linewidth(1.2));
+draw(M--P, linewidth(1.2));
+draw(A--M, linewidth(1.2));
+draw(C--P, linewidth(1.2));
+
+draw(O2--L, medRed);
+draw(O1--L, medRed);
+draw(O2--K, medRed);
+draw(O1--K, medRed);
+
+draw(M--B, medCyan);
+draw(B--C, medCyan);
+draw(C--M, thickBlue);
+draw(A--B, aquaThin);
+draw(B--P, aquaThin);
+draw(P--A, thickBlue);
+
+dot(A, dotstyle+linewidth(2));
+dot(B, dotstyle+linewidth(2));
+dot(C, dotstyle+linewidth(2));
+dot(M, dotstyle+linewidth(2));
+dot(N, dotstyle+linewidth(2));
+dot(Q, dotstyle+linewidth(2));
+dot(P, dotstyle+linewidth(2));
+dot(L, dotstyle+linewidth(2));
+dot(K, dotstyle+linewidth(2));
+dot(O1, dotstyle+linewidth(2));
+dot(O2, dotstyle+linewidth(2));
+
+label("$A$", (3.558128578939537,18.280096255568794), NE*0.5);
+label("$B$", (5.121314943641582,24.096167680436928), NE*0.5);
+label("$C$", (11.06861019325511,18.365223058407362), NE*0.5);
+label("$M$", (0.18020861843396907,25.22813022039358), NE*0.5);
+label("$N$", (-1.7,20.215153257728403), NE*0.5);
+label("$Q$", (15.632395671810503,24.635197461368666), NE*0.5);
+label("$P$", (10.080388928213587,29.181015280559667), NE*0.5);
+label("$L$", (7.313369386097323,18.1644843431961), NE*0.5);
+label("$K$", (5.175217921734756,27.402217003484928), NE*0.5);
+label("$O_1$", (10.763159984060456,24.060232361708145), NE*0.5);
+label("$O_2$", (1.3,21.65256600687971), NE*0.5);
+\end{asy}
+\end{center}
+\begin{remark*}
+  Questo problema è facilmente bashabile in complessi, consiglio di vedere
+  il video di Giuseppe Bassi che spiega come si usano in questo
+  problema (\url{https://www.youtube.com/watch?v=MFcWcl5_DDo}) , ho proposto un'altra
+  soluzione perchè confesso che con i numeri complessi non ho molta
+  dimestichezza.
+\end{remark*}
+
+\subsection{G3}
+
+
+\textbf{Soluzione 1 (Mediana e simmediana)}
+
+Il problema chiede di dimostrare che le rette $AP$ e $AQ$ sono isogonali rispetto
+a $\angle BAC$. Poiché $MN\parallel BC$, per l’inverso del teorema di Ceva la retta
+$AP$ è la mediana uscente da $A$.
+La tesi è quindi equivalente a dimostrare che $AQ$ è la simmediana,
+cioè che $AQ$ passa per l’intersezione $T$ delle tangenti alla circonferenza
+circoscritta di $ABC$ nei punti $B$ e $C$.
+
+Il punto $Q$ è il punto di Miquel del quadrilatero completo $ANCPBM$,
+quindi i quadrilateri $BQNA$ e $CQMA$ sono ciclici. Sia $Y$ la seconda
+intersezione di $MN$ con la circonferenza $(BNA)=\omega_b$ e sia $X$ la
+seconda intersezione di $MN$ con la circonferenza $(CMA)=\omega_c$.
+
+Si ha $XY\parallel BC$. Inoltre
+\[
+\dang YXC=\dang MXC=\dang MAC=\dang BAN=\dang BYN=\dang BYX,
+\]
+quindi $BCYX$ è un trapezio isoscele. Sia $T=BY\cap CX$.
+Dal conto degli angoli $T$ è il punto di intersezione delle tangenti in
+$B$ e in $C$. Inoltre
+\[
+\operatorname{Pow}_{\omega_b}(T)=TB\cdot TY=TC\cdot TX=\operatorname{Pow}_{\omega_c}(T),
+\]
+dunque $T$ appartiene all’asse radicale di $\omega_b$ e $\omega_c$,
+che è la retta $AQ$. Quindi $T\in AQ$, come volevasi.
+
+\begin{center}
+\begin{asy}
+import graph;
+size(8cm);
+
+pair A = (6,30);
+pair B = (4,22);
+pair C = (14,22);
+pair M = (5.17753,26.71014);
+pair N = (9.28985,26.71014);
+pair P = (7.74839,25.33761);
+pair Q = (7.39190,22.42187);
+pair Y = (1.17391,26.71014);
+pair X = (16.82608,26.71014);
+pair T = (9,13.66666);
+pair K = (9,22);
+
+pen blu = rgb(0.49,0.49,1);
+pen viola = rgb(0.29,0,0.51);
+pen arancio = rgb(1,0.4,0);
+pen rosso = rgb(0.86,0.08,0.24);
+pen azzurro = rgb(0.2,0.2,1);
+
+draw(A--B--C--cycle, linewidth(0.4)+blu);
+draw(circle((5.45624,24.13820), 2.58699), linewidth(0.8)+viola);
+draw(circle((10.77745,23.48759), 3.54933), linewidth(0.8)+viola);
+draw(circle((5.23188,25.94202), 4.13002), linewidth(0.8)+arancio);
+draw(circle((11.00181,27.00181), 5.83157), linewidth(0.8)+arancio);
+draw(X--Y, linewidth(0.8)+blu);
+draw(T--A, linewidth(0.8)+rosso);
+draw(T--Y, linewidth(0.8)+azzurro);
+draw(T--X, linewidth(0.8)+azzurro);
+draw(A--K, linewidth(0.8)+rosso);
+draw(B--N, linewidth(0.8)+blu);
+draw(M--C, linewidth(0.8)+blu);
+
+dot("$A$", A, dir(134));
+dot("$B$", B, dir(211));
+dot("$C$", C, dir(303));
+dot("$M$", M, dir(166));
+dot("$N$", N, dir(73));
+dot("$P$", P, dir(96));
+dot("$Q$", Q, dir(183));
+dot("$Y$", Y, dir(166));
+dot("$X$", X, dir(21));
+dot("$T$", T, dir(43));
+dot("$K$", K, dir(43));
+\end{asy}
+\end{center}
+
+
+
+\textbf{Soluzione 2 (Inversione + simmetria rispetto alla bisettrice)}
+
+Come nella Soluzione 1 si ottiene che i quadrilateri $CMQA$ e $BNQA$ sono ciclici.
+Si applica un’inversione di centro $A$ e raggio $\sqrt{MA\cdot CA}$,
+seguita dalla riflessione rispetto alla bisettrice di $\angle CAB$.
+Tale composizione manda la retta $BN$ nella circonferenza $\omega_b$
+e la retta $CM$ nella circonferenza $\omega_c$; di conseguenza manda $P$ in $Q$.
+Ne segue che le rette $AP$ e $AQ$ sono isogonali.
+\section{N}
+
+\subsection{N1}
+Noto che $d_n | (100+(n+1)^2)-(100+ n^2)=2n+1$ quindi $d_n| n(2n+1)-2(100+n^2)=
+n-200$, e allora $d_n| 2n+1-2(n-200)=401$, quindi $d_n\le 401$. L'uguaglianza la
+ottengo scegliendo $n=200$, in quanto $n^2+100 = 100 \cdot 401$, e $(n+1)^2+100 = 101 \cdot
+401$.
+
+\subsection{N2}
+Sia $D=\{n\in\mathbb{N}:n\mid(2^n+1)\}$.
+
+\textbf{(a)} Sia $p\in D$ primo. Allora $2^p\equiv-1\pmod{p}$. L’ordine $d$ di $2$
+modulo $p$ divide $p-1$ (Fermat) e divide $2p$ ma non $p$, dunque $d=2$.
+Segue $p\mid3$, quindi $p=3$. Poiché $3\mid9$, l’unico primo in $D$ è $3$.
+
+\textbf{(b)} Sia $p^k\in D$. Lo stesso argomento di (a) dà $p=3$. Per il
+lemma di lifting the exponent (applicabile perché l’esponente è dispari)
+\[
+v_3(2^{3^k}+1)=v_3(2+1)+v_3(3^k)=1+k>k,
+\]
+quindi $3^k\mid(2^{3^k}+1)$. Tutte le potenze di $3$ stanno in $D$ e
+sono le uniche potenze di primi.
+
+\textbf{(d)} Sia $n\in D$ e sia $p$ il più piccolo primo che divide $n$.
+Si vede che $n$ è dispari e $2^n\equiv-1\pmod{p}$, dunque l’ordine $d$ di $2$ modulo
+$p$ divide $2n$ ma non $n$. Poiché $d\mid(p-1)$ e $p$ è il minimo primo divisor di $n$,
+si ha $\gcd(d,n)=1$. Ne segue $d\mid2$, cioè $p=3$. Quindi ognini elemento di $D$ è multiplo di $3$.
+
+\textbf{(c)} Sia $n=pq$ con $p,q$ primi distinti. Per (d) uno dei fattori è $3$;
+sia $n=3p$ con $p\neq3$. Allora $2^{3p}\equiv-1\pmod{p}$. Poiché $3p\equiv3\pmod{p-1}$
+si ottiene
+\[
+2^{3p}\equiv2^3\equiv8\pmod{p},
+\]
+da cui $p\mid9$: contraddizione. Non esistono elementi di $D$ prodotto di due primi distinti.
+
+\textbf{(e)} Sia $n=p^2q$ con $p,q$ primi distinti. Per (d) $3\mid n$.\\
+
+- Se $q=3$ (e $p\neq3$), allora $2^{3p^2}\equiv-1\pmod{p}$. Poiché $3p^2\equiv3\pmod{p-1}$
+si ha $2^{3p^2}\equiv8\pmod{p}$, dunque $p\mid9$: contraddizione. \\
+- Se $p=3$ (e $q\neq3$), allora $2^{9q}\equiv-1\pmod{q}$.
+Analogamente $9q\equiv9\pmod{q-1}$, quindi $2^{9q}\equiv512\equiv-1\pmod{q}$,
+ossia $q\mid513=3^3\cdot19$. Dunque $q=19$.
+
+Resta da controllare $171=9\cdot19$. Si ha $v_3(2^{171}+1)=1+v_3(171)=2$,
+quindi $9\mid(2^{171}+1)$; inoltre $19\mid(2^{171}+1)$ per la congruenza precedente.
+Essendo $9$ e $19$ coprimi, $171\in D$. È l’unico elemento di questa forma.
+
+
+
+\end{document}
